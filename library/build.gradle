@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+ext {
+    PUBLISH_GROUP_ID = "io.github.gxd523"// 项目包名
+    PUBLISH_ARTIFACT_ID = 'log'// 项目名
+    PUBLISH_VERSION = '0.0.1' // 版本号
+}
+apply from: "${rootProject.projectDir}/publish-mavencentral.gradle"
+
+android {
+    namespace 'com.github.gxd523.log'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 22
+        targetSdk 33
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+}
