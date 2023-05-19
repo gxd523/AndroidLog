@@ -49,8 +49,8 @@ publishing {
                 }
                 developers {
                     developer {
-                        id = 'gxd'// 用户ID
-                        name = 'gxd'// 用户名
+                        id = 'gxd523@gmail.com'// 用户ID
+                        name = 'gxd523'// 用户名
                         email = 'gxd523@gmail.com' // 邮箱
                     }
                 }
@@ -79,8 +79,8 @@ publishing {
             // This is an arbitrary name, you may also use "mavencentral" or any other name that's descriptive for you
             name = "AndroidLog"// 项目名称
 
-            def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-            def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots/"
+            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
             // You only need this if you want to publish snapshots, otherwise just set the URL to the release repo directly
             url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
 
